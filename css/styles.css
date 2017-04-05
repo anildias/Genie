@@ -11,13 +11,19 @@
 
 .right-panel {
 	width: 80%;
-	height: 50%;
+	height: 100%;
 	float: left;
 }
 
-.outer-div {
+.right-panel-inner {
 	width: 100%;
 	height: 50%;
+}
+
+.left-panel-inner {
+	width: 100%;
+	height: 50%;
+	border-right: groove;
 }
 
 .para-typo {
@@ -27,26 +33,35 @@
 	font-weight: 800;
 }
 
-.logo {
-	padding: 21% 24%;
-	width: 50%;
-	height: 9%;
+.heading-typo {
+	font-family: Montserrat;
+	color:  #ffffff;
+	font-size: 16px;/* Approximation due to font substitution */
+	font-weight: 300;
+	text-align: center;
+	transform: scaleX(1.0012);/* width and height properties ommitted due to transform */
 }
 
-.logo img {
-	width: 120px;
-	height: 60%;
+.logo-outer {
+	width: 100%;
+	height: 40%;
+}
+
+.logo-img {
+	width: 90%;
+	height: 100%;
+	padding: 10% 10%;
 }
 
 .nav-list {
-	padding: 20% 24%;
+	padding: 14% 20%;
 	width: 100%;
-	height: 45%;
+	height: 60%;
 	font-family: Montserrat;
 	color:  #0592d0;
-	font-size: 16px;/* Approximation due to font substitution */
+	font-size: 100%;/* Approximation due to font substitution */
 	font-weight: 400;
-	line-height: 28px;/* Approximation due to font substitution */
+	line-height: 30px;/* Approximation due to font substitution */
 	text-align: left;
 }
 
@@ -64,7 +79,15 @@
 	border-right: groove;
 }
 
-.form-control {
+.oval {
+	border-radius: 20px;
+	height: 10%;
+}
+
+.check div{
+	padding: 6% 0% 0% 0%;
+}
+/*.form-control {
 	width: 80%;
 	height: 10%;
 	border-radius: 20px;
@@ -73,31 +96,31 @@
 .form-fields {
 	margin-top: 4%;
 	margin-left: 18%;
-}
+}*/
 
 .forgot-password {
+	text-align: center;
 	font-family: Montserrat;
-	color:  #333333;
-	font-size: 12px;/* Approximation due to font substitution */
+	font-size: 12px;
 	font-weight: 300;
-	line-height: 28px;/* Approximation due to font substitution */
-	text-align: left;
+	line-height: 28px;
+}
+
+.forgot-password a {
+	color:  #333333;
 }
 
 .social-buttons {
-	width: 80%;
+	width: 100%;
 	height: 10%;
-	margin-top: -10%
 }
 
 .sign-up {
-	width: 80%;
-	height: 10%;
-	margin-top: 18%
+	margin-top: 25%
 }
 
-#banner {
-	background-image: url("../img/banner.png");
+#banner-outer {
+	background-image: url("img/banner.png");
 	background-position: center;
 	background-size: 100%;
 	background-repeat: no-repeat;
@@ -105,31 +128,50 @@
 	height: 100%;
 }
 
+#banner-title {
+	margin: auto;
+	padding: 5%;
+}
+
 .title {
 	font-family: Montserrat;
 	color:  #ffffff;
-	font-size: 36px;/* Approximation due to font substitution */
+	font-size: 29px;/* Approximation due to font substitution */
 	font-weight: 300;
 	text-align: center;
 	transform: scaleX(1.0012);/* width and height properties ommitted due to transform */
 }
 
 .search-bar {
-	margin-left: 22%;
-	margin-top: 10%;
+	margin-left: 23%;
+	margin-top: -5%;
+}
+
+.search-form {
+	padding: 1% 3%;
 	border-style: solid;
 	border-width: 2px;
 	border-color:  rgba(0, 0, 0, 10);
 	border-radius: 50px;
 	box-sizing: border-box;
 	background-color:  rgba(255, 255, 255, 0.9);
-	width: 55.8%;
+	width: 70%;
 	height: 15%;
+}
+
+#search-icon {
+	background-image:url(../img/search.png); 
+	background-repeat: no-repeat; 
+	background-position: 98% 50%;
+}
+
+#search-terms {
+	margin-left: -36%;
 }
 
 .service-list {
 	margin-left: 1%;
-	margin-top: 0%;
+	padding: 2% 2% 2% 2%;
 }
 
 .service-icons {
@@ -147,8 +189,8 @@
 	border-color:  #d4d7d9;
 	box-sizing: border-box;
 	background-color:  #f8f8f8;
-	width: 75%;
-	height: 90%;
+	width: 65%;
+	height: 75%;
 	position: relative;
 	vertical-align: middle;
 }
@@ -156,7 +198,7 @@
 .service-name {
 	font-family: Montserrat;
 	color:  #333333;
-	font-size: 18.56px;/* Approximation due to font substitution */
+	font-size: 100%;/* Approximation due to font substitution */
 	font-weight: 300;
 	text-align: center;
 	transform: scaleY(1.0184);/* width and height properties ommitted due to transform */
@@ -172,6 +214,65 @@
   bottom: 0;
   left: 0;
   right: 0;
+}
+
+.vertical-alignment-helper {
+  display:table;
+  height: 100%;
+  width: 100%;
+  padding: 0% 2%;
+  pointer-events:none; /* This makes sure that we can still click outside of the modal to close it */
+}
+
+.vertical-align-center {
+	display: table-cell;
+  vertical-align: middle;
+}
+
+.modal-content {
+    /* Bootstrap sets the size of the modal in the modal-dialog class, we need to inherit it */
+    width:inherit;
+    height:inherit;
+    /* To center horizontally */
+    margin: 0 auto;
+    pointer-events: all;
+    border-radius: 15px;
+		background-color:  #ffffff;
+		width: 62.5%;
+		height: 56%;
+}
+
+.modal-left-inner-body {
+	width: 40%;
+	height: 100%;
+	float: left;
+	background-image: url("../img/modal-image2.png");
+	background-position: center;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
+}
+
+.modal-right-inner-body {
+	width: 60%;
+	height: 100%;
+	float: left;
+	padding: 3% 3% 3% 3%;
+}
+
+#sign-up-modal-image {
+	width: 79%;
+	height: 57.9%;
+	margin-left: 3%;
+	margin-top: -12%;
+	border-radius: 15px;
+}
+
+.signup-form-fields {
+	margin-top: 2%;
+	width: 100%;
+	height: 10%;
 }
 
 .copy-right {

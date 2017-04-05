@@ -10,9 +10,9 @@
 <body>
 	<div class="full-panel">
 		<div class="left-panel">
-			<div class="outer-div">
-				<div class="logo">
-					<img src="../img/logo.png">
+			<div class="left-panel-inner">
+				<div class="logo-outer">
+					<img src="../img/logo.png" class="logo-img">
 				</div>
 				<div class="nav-list">
 					<ul class="nav flex-column">
@@ -23,125 +23,185 @@
 					</ul>
 				</div>
 			</div>
-			<div class="outer-div">
+			<div class="left-panel-inner">
 				<div class="login">
-					<div class="form-group row">
-						<div class="col-9 form-fields">
-  						<input type="text" class="form-control" placeholder="Email">
-  					</div>
-  					<div class="col-9 form-fields">
-  						<input type="text" class="form-control" placeholder="Password">
-  					</div>
-  					<div class="col-9 form-fields">
-  						<button type="submit" class="btn btn-primary btn-sm btn-block form-control">
-  						<p class="para-typo">SIGN IN</p>
-  						</button>
-  					</div>
-  					<div class="col-9 form-fields">
-  						<p class="forgot-password"> Forgot Password</p>
-  					</div>
-  					<div class="col-9 form-fields">
-  						<a href="">
-  							<img src="../img/social-buttons.png" class="social-buttons">
-  						</a>
-  					</div>
-  					<div class="col-9 form-fields">
-  						<a href="">
-  							<img src="../img/sign-up.png" class="sign-up">
-  						</a>
-  					</div>
+					<div class="form-group row justify-content-md-center">
+						<div class="col-8">
+							<fieldset class="form-group check">
+								<div class="form-fields">
+		  						<input type="text" class="form-control oval" placeholder="Email">
+		  					</div>
+		  					<div class="form-fields">
+		  						<input type="text" class="form-control oval" placeholder="Password">
+		  					</div>
+		  					<div class="form-fields">
+		  						<button type="submit" class="form-control btn btn-primary btn-sm btn-block oval">
+		  							<p class="para-typo">SIGN IN</p>
+		  						</button>
+		  					</div>
+		  					<div class="form-fields forgot-password">
+		  						<a href="">
+		  							Forgot Password
+		  						</a>
+		  					</div>
+		  					<div class="form-fields">
+		  						<a href="">
+		  							<img src="../img/social-buttons.png" class="social-buttons">
+		  						</a>
+		  					</div>
+		  					<div class="form-fields sign-up">
+		  						<button type="button" class="btn btn-warning btn-sm btn-block form-control oval" data-toggle="modal" data-target="#myModal">
+		  							<p class="para-typo">SIGN UP</p>
+		  						</button>
+		  					</div>
+		  				</fieldset>
+	  				</div>
 					</div>
 				</div>
+				<!-- Modal Begin-->
+					<div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+						<div class="vertical-alignment-helper">
+						  <div class="modal-dialog vertical-align-center" role="document">
+						    <div class="modal-content">
+						      <div class="">
+						        <div class="modal-left-inner-body">
+						        <img id="sign-up-modal-image" src="../img/modal-image1.png">
+						        </div>
+						        <div class="modal-right-inner-body">
+						      		<h3>Sign Up</h3>
+						        	<div class="form-group row">
+						        		<div class="col-6">
+							        		<div class="">
+												    <select class="">
+												      <option>User</option>
+												      <option>Genie</option>
+												    </select>
+												  </div>
+												  <div class="form-fields">
+												    <input type="text" class="form-control" placeholder="Name">
+												  </div>
+												  <div class="form-fields">  
+												    <input type="text" class="form-control" placeholder="Password">
+												  </div>
+												  <div class="">
+												    <input type="text" class="" placeholder="Phone No">
+												  </div>
+												  <div class="">
+												    <input type="text" class="" placeholder="Date of Birth">
+							  					</div>
+							  				</div>
+							  				<div class="col-6">
+							  					<div class="">
+							  						<input type="text" placeholder="dfd">
+							  					</div>
+							  				</div>	
+						        	</div>
+						        </div>
+						      </div>
+						    </div>
+						  </div>
+						</div>
+					</div>
+				<!-- Modal End-->
 				<div class="copy-right">
 					<p class="forgot-password">copyright @QBurst Technologies</p>
 				</div>
 			</div>
 		</div>
 		<div class="right-panel">
-			<div id="banner">
-				<p class="title">
-					Our Genie can get rid of all your problems
-				</p>
-				<div class="">
-					<input type="text" class="search-bar form-control" placeholder="Search">
+			<div class="right-panel-inner">
+				<div id="banner-outer">
+					<div id="banner-title">
+						<p class="title">
+							Our Genie can get rid of all your problems!
+						</p>
+					</div>
+					<div class="search-bar">
+						<input id="search-icon" type="text" class="search-form" placeholder="Search">
+						<div id="search-terms">
+							<p class="heading-typo">
+								Keywords: Driver, Chauffeur, Electrician, Plumber, Caregiver, Nanny
+							</p>
+						</div>
+					</div>
 				</div>
 			</div>
-		</div>
-		<div class="right-panel">
-			<div class="service-list">
-				<div class="service-icons">
-					<div class="service-icons-box">
-						<img class="icon-img" src="../img/plumber.png">
+			<div class="right-panel-inner">
+				<div class="service-list">
+					<div class="service-icons">
+						<div class="service-icons-box">
+							<img class="icon-img" src="../img/plumber.png">
+						</div>
+						<p class="service-name">Plumber</p>
 					</div>
-					<p class="service-name">Plumber</p>
+					<div class="service-icons">
+						<div class="service-icons-box">
+							<img class="icon-img" src="../img/caregiver.png">
+						</div>
+						<p class="service-name">Caregiver</p>
+					</div>
+					<div class="service-icons">
+						<div class="service-icons-box">
+							<img class="icon-img" src="../img/mason.png">
+						</div>
+						<p class="service-name">Mason</p>
+					</div>
+					<div class="service-icons">
+						<div class="service-icons-box">
+							<img class="icon-img" src="../img/chauffeur.png">
+						</div>
+						<p class="service-name">Chauffeur</p>
+					</div>
+					<div class="service-icons">
+						<div class="service-icons-box">
+							<img class="icon-img" src="../img/electrician.png">
+						</div>
+						<p class="service-name">Electrician</p>
+					</div>
+					<div class="service-icons">
+						<div class="service-icons-box">
+							<img class="icon-img" src="../img/guard.png">
+						</div>
+						<p class="service-name">Guard</p>
+					</div>
 				</div>
-				<div class="service-icons">
-					<div class="service-icons-box">
-						<img class="icon-img" src="../img/caregiver.png">
+				<div class="service-list">
+					<div class="service-icons">
+						<div class="service-icons-box">
+							<img class="icon-img" src="../img/janitor.png">
+						</div>
+						<p class="service-name">Janitor</p>
 					</div>
-					<p class="service-name">Caregiver</p>
-				</div>
-				<div class="service-icons">
-					<div class="service-icons-box">
-						<img class="icon-img" src="../img/carpenter.png">
+					<div class="service-icons">
+						<div class="service-icons-box">
+							<img class="icon-img" src="../img/landscaper.png">
+						</div>
+						<p class="service-name">Landscaper</p>
 					</div>
-					<p class="service-name">Carpenter</p>
-				</div>
-				<div class="service-icons">
-					<div class="service-icons-box">
-						<img class="icon-img" src="../img/chauffeur.png">
+					<div class="service-icons">
+						<div class="service-icons-box">
+							<img class="icon-img" src="../img/carpenter.png">
+						</div>
+						<p class="service-name">Carpenter</p>
 					</div>
-					<p class="service-name">Chauffeur</p>
-				</div>
-				<div class="service-icons">
-					<div class="service-icons-box">
-						<img class="icon-img" src="../img/electrician.png">
+					<div class="service-icons">
+						<div class="service-icons-box">
+							<img class="icon-img" src="../img/painter.png">
+						</div>
+						<p class="service-name">Painter</p>
 					</div>
-					<p class="service-name">Electrician</p>
-				</div>
-				<div class="service-icons">
-					<div class="service-icons-box">
-						<img class="icon-img" src="../img/guard.png">
+					<div class="service-icons">
+						<div class="service-icons-box">
+							<img class="icon-img" src="../img/mechanic.png">
+						</div>
+						<p class="service-name">Mechanic</p>
 					</div>
-					<p class="service-name">Guard</p>
-				</div>
-			</div>
-			<div class="service-list">
-				<div class="service-icons">
-					<div class="service-icons-box">
-						<img class="icon-img" src="../img/janitor.png">
+					<div class="service-icons">
+						<div class="service-icons-box">
+							<img class="icon-img" src="../img/nanny.png">
+						</div>
+						<p class="service-name">Nanny</p>
 					</div>
-					<p class="service-name">Janitor</p>
-				</div>
-				<div class="service-icons">
-					<div class="service-icons-box">
-						<img class="icon-img" src="../img/landscaper.png">
-					</div>
-					<p class="service-name">Landscaper</p>
-				</div>
-				<div class="service-icons">
-					<div class="service-icons-box">
-						<img class="icon-img" src="../img/mason.png">
-					</div>
-					<p class="service-name">Mason</p>
-				</div>
-				<div class="service-icons">
-					<div class="service-icons-box">
-						<img class="icon-img" src="../img/painter.png">
-					</div>
-					<p class="service-name">Painter</p>
-				</div>
-				<div class="service-icons">
-					<div class="service-icons-box">
-						<img class="icon-img" src="../img/mechanic.png">
-					</div>
-					<p class="service-name">Mechanic</p>
-				</div>
-				<div class="service-icons">
-					<div class="service-icons-box">
-						<img class="icon-img" src="../img/nanny.png">
-					</div>
-					<p class="service-name">Nanny</p>
 				</div>
 			</div>
 		</div>
